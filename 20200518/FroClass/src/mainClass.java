@@ -16,8 +16,13 @@ public class mainClass {
 		
 		for (int k = 0; k < iarr.length; k++) {
 			System.out.printf("iarr[%d] : %d\n", k, iarr[k]);
-		}
+		} 
 		
+		/*
+		 * foreach와 유사한 for문을 자바에서 사용 가능하다.
+		 * for (<배열 자료형> 원소명 : 배열)
+		 * 다음과 같이 사용할 때에 반복문에서 index를 제공해 주지 않는다.
+		 */
 		for (int iter : iarr) {
 			System.out.println(iter);
 		}
