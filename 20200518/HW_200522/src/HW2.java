@@ -1,7 +1,44 @@
 import java.util.Scanner;
 
 public class HW2 {
-
+/*
+		String str = "10 11 1234";
+		int start = 0;
+		int cnt = 0;
+		boolean check = false;
+		char tmp;
+		int[] inputArr = new int[3];
+        for (int i = 0; i < str.length(); i++) {
+            tmp = str.charAt(i);
+            if( (tmp >= '0') && (tmp <= '9') ) {
+                if(check == false) {
+                    start = i;
+                }
+                check = true;
+                System.out.println("is num - " + tmp);
+                if( (i > start) && (i == str.length() - 1) ) {
+                    inputArr[cnt] = Integer.parseInt(str.substring(start, i + 1));
+                    cnt++;
+                    if(cnt == 3) {
+                        break;
+                    }
+                }
+            } else {
+                check = false;
+                System.out.println("is NOT num");
+                if(i > start) {
+                    inputArr[cnt] = Integer.parseInt(str.substring(start, i));
+                    cnt++;
+                    if(cnt == 3) {
+                        break;
+                    }
+                }
+            }
+        }
+        for(int i : inputArr) {
+            System.out.println(i);
+        }
+ */
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int rand[] = new int[3];
@@ -27,10 +64,11 @@ public class HW2 {
 			for (int i = 0; i < 10; i++) {
 				b = s = 0;
 				System.out.printf("숫자 세 개를 입력해 주세요(%d/10) >> ", i + 1);
+				// 수신 문자열 파싱
 				input[0] = scan.nextInt();
 				input[1] = scan.nextInt();
 				input[2] = scan.nextInt();
-				scan.
+				
 				// strike 탐색
 				for(int iter = 0; iter < 3; iter++) {
 					if( (input[iter] == rand[iter])) {
