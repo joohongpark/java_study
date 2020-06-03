@@ -15,9 +15,9 @@ public class mainClass {
 			if( (str.charAt(index) < '0') || (str.charAt(index) > '9') ) {
 				if( (str.charAt(index) == '.') && (isNaturalNumber == true) ) {
 					isNaturalNumber = false;
-					break;
 				} else {
 					isNumber = false;
+					break;
 				}
 			}
 		}
