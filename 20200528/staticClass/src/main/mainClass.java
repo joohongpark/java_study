@@ -9,7 +9,8 @@ public class mainClass {
 		{
 			int i;
 			String str;
-			Myclass obj; // 이런 거도 스택에 올라간다.
+			MyClass obj; // 이런 거도 스택에 올라간다.
+			obj = new MyClass(); // new 연산자로 생성된 인스턴스 자체는 힙에 올라간다.
 		}
 		
 
