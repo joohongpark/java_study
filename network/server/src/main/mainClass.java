@@ -1,5 +1,6 @@
 package main;
 
+import gui.GUIMain;
 import threadtest.makeSession;
 import threadtest.sess;
 
@@ -14,18 +15,23 @@ public class mainClass {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
+		//  GUIMain.run();
+
 		String str = null;
 		threadArrayList = new ArrayList<Thread>();
-		Socket socket = null;
-		Thread makesession = new makeSession(socket);
+		Thread makesession = new makeSession();
 		makesession.start();
 		System.out.println("루프 진입 ");
 
 		while(true) {
 			Scanner scanner = new Scanner(System.in);
 			str = scanner.nextLine();
-			for (int i = 0; i < threadArrayList.size(); i++) {
-					((sess)threadArrayList.get(i)).msg(str);
+			for(Thread t : threadArrayList) {
+				if(!((sess)t).isFinish) {
+					((sess)t).msg(str);
+				} else {
+					threadArrayList.remove(t);
+				}
 			}
 		}
 

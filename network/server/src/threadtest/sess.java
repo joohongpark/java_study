@@ -29,7 +29,7 @@ public class sess extends Thread {
                 System.out.println("[" + objectName + "] " + recv);
             }
         } catch (IOException e) {
-            System.out.println(e);
+            System.out.println("[" + objectName + "] 연결이 끊어졌습니다.");
             isFinish = true;
         }
     }
