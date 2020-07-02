@@ -95,6 +95,7 @@ public class WindowTest extends Frame implements WindowListener, ActionListener 
         player.setText(btnTitle);
         computer.setText(game.convertToString(rand));
         scoreBar.setText(game.getScore());
+        samplemethod();
     }
 
     @Override
@@ -135,6 +136,17 @@ public class WindowTest extends Frame implements WindowListener, ActionListener 
     public void windowOpened(WindowEvent e) {
         // TODO Auto-generated method stub
 
+    }
+
+    public void samplemethod() {
+        while(true) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException interruptedException) {
+                interruptedException.printStackTrace();
+            }
+            System.out.println("sleep");
+        }
     }
 
 }
